@@ -35,6 +35,10 @@ for p in "${PAGES[@]}"; do
   curl -sf "http://127.0.0.1:$PORT$p" -o "$out"
   echo "  ok $p"
 done
+
+# Plain-text SEO files at the site root.
+curl -sf "http://127.0.0.1:$PORT/sitemap.xml" -o docs_tmp/sitemap.xml && echo "  ok /sitemap.xml"
+cp public/robots.txt docs_tmp/robots.txt && echo "  ok /robots.txt"
 cp docs_tmp/index.html docs_tmp/404.html
 touch docs_tmp/.nojekyll
 [ -f docs/CNAME ] && cp docs/CNAME docs_tmp/CNAME
