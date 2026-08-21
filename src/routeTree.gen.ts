@@ -10,12 +10,9 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TermsRouteImport } from './routes/terms'
-import { Route as SolutionsRouteImport } from './routes/solutions'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as ResourcesRouteImport } from './routes/resources'
 import { Route as ResearchRouteImport } from './routes/research'
 import { Route as PrivacyRouteImport } from './routes/privacy'
-import { Route as IndustriesRouteImport } from './routes/industries'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BookRouteImport } from './routes/book'
 import { Route as AboutRouteImport } from './routes/about'
@@ -26,19 +23,9 @@ const TermsRoute = TermsRouteImport.update({
   path: '/terms',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SolutionsRoute = SolutionsRouteImport.update({
-  id: '/solutions',
-  path: '/solutions',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ResourcesRoute = ResourcesRouteImport.update({
-  id: '/resources',
-  path: '/resources',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ResearchRoute = ResearchRouteImport.update({
@@ -49,11 +36,6 @@ const ResearchRoute = ResearchRouteImport.update({
 const PrivacyRoute = PrivacyRouteImport.update({
   id: '/privacy',
   path: '/privacy',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const IndustriesRoute = IndustriesRouteImport.update({
-  id: '/industries',
-  path: '/industries',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -82,12 +64,9 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/book': typeof BookRoute
   '/contact': typeof ContactRoute
-  '/industries': typeof IndustriesRoute
   '/privacy': typeof PrivacyRoute
   '/research': typeof ResearchRoute
-  '/resources': typeof ResourcesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/solutions': typeof SolutionsRoute
   '/terms': typeof TermsRoute
 }
 export interface FileRoutesByTo {
@@ -95,12 +74,9 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/book': typeof BookRoute
   '/contact': typeof ContactRoute
-  '/industries': typeof IndustriesRoute
   '/privacy': typeof PrivacyRoute
   '/research': typeof ResearchRoute
-  '/resources': typeof ResourcesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/solutions': typeof SolutionsRoute
   '/terms': typeof TermsRoute
 }
 export interface FileRoutesById {
@@ -109,12 +85,9 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/book': typeof BookRoute
   '/contact': typeof ContactRoute
-  '/industries': typeof IndustriesRoute
   '/privacy': typeof PrivacyRoute
   '/research': typeof ResearchRoute
-  '/resources': typeof ResourcesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/solutions': typeof SolutionsRoute
   '/terms': typeof TermsRoute
 }
 export interface FileRouteTypes {
@@ -124,12 +97,9 @@ export interface FileRouteTypes {
     | '/about'
     | '/book'
     | '/contact'
-    | '/industries'
     | '/privacy'
     | '/research'
-    | '/resources'
     | '/sitemap.xml'
-    | '/solutions'
     | '/terms'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -137,12 +107,9 @@ export interface FileRouteTypes {
     | '/about'
     | '/book'
     | '/contact'
-    | '/industries'
     | '/privacy'
     | '/research'
-    | '/resources'
     | '/sitemap.xml'
-    | '/solutions'
     | '/terms'
   id:
     | '__root__'
@@ -150,12 +117,9 @@ export interface FileRouteTypes {
     | '/about'
     | '/book'
     | '/contact'
-    | '/industries'
     | '/privacy'
     | '/research'
-    | '/resources'
     | '/sitemap.xml'
-    | '/solutions'
     | '/terms'
   fileRoutesById: FileRoutesById
 }
@@ -164,12 +128,9 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   BookRoute: typeof BookRoute
   ContactRoute: typeof ContactRoute
-  IndustriesRoute: typeof IndustriesRoute
   PrivacyRoute: typeof PrivacyRoute
   ResearchRoute: typeof ResearchRoute
-  ResourcesRoute: typeof ResourcesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
-  SolutionsRoute: typeof SolutionsRoute
   TermsRoute: typeof TermsRoute
 }
 
@@ -182,25 +143,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TermsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/solutions': {
-      id: '/solutions'
-      path: '/solutions'
-      fullPath: '/solutions'
-      preLoaderRoute: typeof SolutionsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/resources': {
-      id: '/resources'
-      path: '/resources'
-      fullPath: '/resources'
-      preLoaderRoute: typeof ResourcesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/research': {
@@ -215,13 +162,6 @@ declare module '@tanstack/react-router' {
       path: '/privacy'
       fullPath: '/privacy'
       preLoaderRoute: typeof PrivacyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/industries': {
-      id: '/industries'
-      path: '/industries'
-      fullPath: '/industries'
-      preLoaderRoute: typeof IndustriesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -260,12 +200,9 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   BookRoute: BookRoute,
   ContactRoute: ContactRoute,
-  IndustriesRoute: IndustriesRoute,
   PrivacyRoute: PrivacyRoute,
   ResearchRoute: ResearchRoute,
-  ResourcesRoute: ResourcesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
-  SolutionsRoute: SolutionsRoute,
   TermsRoute: TermsRoute,
 }
 export const routeTree = rootRouteImport
