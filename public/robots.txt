@@ -1,4 +1,4 @@
-# Rebate Intel — https://rebateintel.com
+# KMS Signal — https://kmssignal.com
 User-agent: *
 Allow: /
 
