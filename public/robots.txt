@@ -63,4 +63,4 @@ Allow: /
 User-agent: DuckAssistBot
 Allow: /
 
-Sitemap: https://rebateintel.com/sitemap.xml
+Sitemap: https://kmssignal.com/sitemap.xml

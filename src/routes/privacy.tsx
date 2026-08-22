@@ -4,10 +4,10 @@ import { Section } from "@/components/site/Section";
 export const Route = createFileRoute("/privacy")({
   head: () => ({
     meta: [
-      { title: "Privacy Policy — Rebate Intel" },
-      { name: "description", content: "How RebateIntel collects, uses, and protects your information." },
-      { property: "og:title", content: "Privacy Policy — Rebate Intel" },
-      { property: "og:description", content: "How RebateIntel collects, uses, and protects your information." },
+      { title: "Privacy Policy — KMS Signal" },
+      { name: "description", content: "How KMS Signal collects, uses, and protects your information." },
+      { property: "og:title", content: "Privacy Policy — KMS Signal" },
+      { property: "og:description", content: "How KMS Signal collects, uses, and protects your information." },
       { property: "og:url", content: "/privacy" },
     ],
     links: [{ rel: "canonical", href: "/privacy" }],
@@ -27,7 +27,7 @@ function PrivacyPage() {
           <section>
             <h2 className="text-xl font-semibold">Introduction</h2>
             <p className="mt-3 text-muted-foreground leading-relaxed">
-              RebateIntel respects your privacy. This Privacy Policy explains how we collect, use, and protect information when you visit our website or contact us.
+              KMS Signal respects your privacy. This Privacy Policy explains how we collect, use, and protect information when you visit our website or contact us.
             </p>
           </section>
 

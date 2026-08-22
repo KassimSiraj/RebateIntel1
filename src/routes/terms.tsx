@@ -4,10 +4,10 @@ import { Section } from "@/components/site/Section";
 export const Route = createFileRoute("/terms")({
   head: () => ({
     meta: [
-      { title: "Terms of Service — Rebate Intel" },
-      { name: "description", content: "Terms governing use of the RebateIntel website and services." },
-      { property: "og:title", content: "Terms of Service — Rebate Intel" },
-      { property: "og:description", content: "Terms governing use of the RebateIntel website and services." },
+      { title: "Terms of Service — KMS Signal" },
+      { name: "description", content: "Terms governing use of the KMS Signal website and services." },
+      { property: "og:title", content: "Terms of Service — KMS Signal" },
+      { property: "og:description", content: "Terms governing use of the KMS Signal website and services." },
       { property: "og:url", content: "/terms" },
     ],
     links: [{ rel: "canonical", href: "/terms" }],
@@ -27,14 +27,14 @@ function TermsPage() {
           <section>
             <h2 className="text-xl font-semibold">Acceptance</h2>
             <p className="mt-3 text-muted-foreground leading-relaxed">
-              By using the RebateIntel website, you agree to these Terms.
+              By using the KMS Signal website, you agree to these Terms.
             </p>
           </section>
 
           <section>
             <h2 className="text-xl font-semibold">Services</h2>
             <p className="mt-3 text-muted-foreground leading-relaxed">
-              RebateIntel provides AI positioning and digital strategy consulting for commercial solar companies.
+              KMS Signal provides AI positioning and digital strategy consulting for commercial solar companies.
             </p>
             <p className="mt-3 text-muted-foreground leading-relaxed">
               Information on this website is for informational purposes only and does not constitute legal, financial, or engineering advice.
@@ -44,7 +44,7 @@ function TermsPage() {
           <section>
             <h2 className="text-xl font-semibold">Intellectual Property</h2>
             <p className="mt-3 text-muted-foreground leading-relaxed">
-              All content on this website belongs to RebateIntel unless otherwise stated.
+              All content on this website belongs to KMS Signal unless otherwise stated.
             </p>
             <p className="mt-3 text-muted-foreground leading-relaxed">
               Content may not be copied or reproduced without permission.
@@ -75,7 +75,7 @@ function TermsPage() {
           <section>
             <h2 className="text-xl font-semibold">Limitation of Liability</h2>
             <p className="mt-3 text-muted-foreground leading-relaxed">
-              RebateIntel shall not be liable for indirect or consequential damages arising from use of this website or our services.
+              KMS Signal shall not be liable for indirect or consequential damages arising from use of this website or our services.
             </p>
           </section>
         </div>
