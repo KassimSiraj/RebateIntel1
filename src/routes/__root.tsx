@@ -79,14 +79,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Rebate Intel — AI Visibility for Commercial Solar" },
+      { title: "KMS Signal — AI Visibility for Commercial Solar" },
       {
         name: "description",
         content:
-          "We help commercial solar companies become recommended by ChatGPT, Gemini, Claude, and Perplexity.",
+          "KMS Signal helps commercial solar companies improve how they are discovered, understood, and represented across AI-powered search.",
       },
-      { name: "author", content: "Rebate Intel" },
-      { property: "og:site_name", content: "Rebate Intel" },
+      { name: "author", content: "KMS Signal" },
+      { property: "og:site_name", content: "KMS Signal" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

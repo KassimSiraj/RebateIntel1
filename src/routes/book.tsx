@@ -10,16 +10,16 @@ const CAL_LINK = "https://cal.com/rebateintel/15min";
 export const Route = createFileRoute("/book")({
   head: () => ({
     meta: [
-      { title: "Book an AI Positioning Strategy Call — Rebate Intel" },
+      { title: "Book a Strategy Call — KMS Signal" },
       {
         name: "description",
         content:
-          "Share four details and unlock the calendar to book a 15-minute AI positioning strategy call with Rebate Intel.",
+          "Share four details and unlock the calendar to book a strategy call with KMS Signal about your AI visibility.",
       },
-      { property: "og:title", content: "Book an AI Positioning Strategy Call" },
+      { property: "og:title", content: "Book a Strategy Call" },
       {
         property: "og:description",
-        content: "Unlock the calendar and book a 15-minute AI positioning strategy call.",
+        content: "Unlock the calendar and book a strategy call with KMS Signal.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -63,17 +63,17 @@ function BookPage() {
         <div className="lg:col-span-5">
           <div className="eyebrow mb-4">Strategy call</div>
           <h1 className="text-4xl md:text-5xl font-semibold text-foreground text-balance">
-            Book an AI Positioning strategy call.
+            Book a strategy call.
           </h1>
           <p className="mt-5 text-lg text-muted-foreground leading-relaxed">
-            Tell us who you are and we'll open the calendar. On the call we show you live how the
-            major AI platforms describe your company today — and what it takes to become the
-            recommendation buyers see first.
+            Tell us who you are and we'll open the calendar. On the call we look at how AI-powered
+            search currently discovers, understands, and represents your commercial solar company —
+            and what it would take to improve it.
           </p>
           <ul className="mt-8 space-y-3">
             {[
-              "Live look at how 4 AI platforms describe your company",
-              "Honest assessment of your AI recommendation share",
+              "A live look at how AI-powered search represents your company",
+              "An honest read on where your visibility gaps are",
               "Clear next steps — no pressure, no pitch deck",
             ].map((p) => (
               <li key={p} className="flex items-start gap-3 text-sm text-foreground">
