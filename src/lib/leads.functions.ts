@@ -6,7 +6,9 @@ const leadSchema = z.object({
   email: z.string().trim().email("Enter a valid work email").max(200),
   jobTitle: z.string().trim().min(1, "Job title is required").max(120),
   company: z.string().trim().min(1, "Company name is required").max(160),
+  message: z.string().trim().max(2000).optional(),
 });
+
 
 export type LeadInput = z.infer<typeof leadSchema>;
 
@@ -23,7 +25,7 @@ export const submitLead = createServerFn({ method: "POST" })
 
     const url =
       `https://connector-gateway.lovable.dev/google_sheets/v4/spreadsheets/${spreadsheetId}` +
-      `/values/Leads!A:E:append?valueInputOption=USER_ENTERED&insertDataOption=INSERT_ROWS`;
+      `/values/Leads!A:F:append?valueInputOption=USER_ENTERED&insertDataOption=INSERT_ROWS`;
 
     const response = await fetch(url, {
       method: "POST",
@@ -40,10 +42,12 @@ export const submitLead = createServerFn({ method: "POST" })
             data.email,
             data.jobTitle,
             data.company,
+            data.message ?? "",
           ],
         ],
       }),
     });
+
 
     if (!response.ok) {
       const errorBody = await response.text();
