@@ -1,3 +1,4 @@
+import kmsLogo from "@/assets/kms-logo.png";
 import { Link } from "@tanstack/react-router";
 
 export function SiteFooter() {

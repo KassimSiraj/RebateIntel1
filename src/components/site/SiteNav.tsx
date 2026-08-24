@@ -1,3 +1,4 @@
+import kmsLogo from "@/assets/kms-logo.png";
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
