@@ -17,8 +17,8 @@ export function SiteNav() {
     <header className="sticky top-0 z-40 bg-background/80 backdrop-blur-md hairline-b">
       <div className="container-page flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2.5">
-          <img src="/favicon.png" alt="KMS Signal" className="h-8 w-8" />
-          <span className="text-lg font-semibold tracking-tight text-foreground">KMS Signal</span>
+          <img src={kmsLogo} alt="KMS Signal" className="h-9 w-auto" />
+          <span className="text-lg font-semibold tracking-tight text-foreground">Signal</span>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1">

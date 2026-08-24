@@ -13,6 +13,7 @@ import {
 import { Section, SectionHeader } from "@/components/site/Section";
 import { Reveal } from "@/components/site/Reveal";
 import { ResearchVisual } from "@/components/site/ResearchVisual";
+import { AIFan } from "@/components/site/AIFan";
 import { FinalCTA } from "@/components/site/CTA";
 
 export const Route = createFileRoute("/")({
