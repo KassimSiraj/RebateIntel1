@@ -63,29 +63,29 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.22 0.02 275);
 
-  --muted: oklch(0.975 0.008 70);
+  --muted: oklch(0.955 0.01 80);
   --muted-foreground: oklch(0.52 0.02 275);
 
-  --surface: oklch(0.982 0.012 72);
+  --surface: oklch(0.935 0.012 80);
   --surface-foreground: oklch(0.22 0.02 275);
 
-  --secondary: oklch(0.965 0.014 68);
+  --secondary: oklch(0.93 0.014 80);
   --secondary-foreground: oklch(0.24 0.02 275);
 
-  --accent: oklch(0.955 0.03 60);
+  --accent: oklch(0.94 0.035 85);
   --accent-foreground: oklch(0.24 0.02 275);
 
-  --border: oklch(0.92 0.012 70);
-  --hairline: oklch(0.945 0.01 70);
-  --input: oklch(0.92 0.012 70);
-  --ring: oklch(0.68 0.19 43);
+  --border: oklch(0.88 0.014 80);
+  --hairline: oklch(0.9 0.012 80);
+  --input: oklch(0.88 0.014 80);
+  --ring: oklch(0.81 0.16 84);
 
   /* Brand — Surfer coral-orange */
   --primary: oklch(0.27 0.03 275);
   --primary-foreground: oklch(0.99 0 0);
-  --brand: oklch(0.68 0.19 43);
-  --brand-foreground: oklch(0.99 0 0);
-  --brand-muted: oklch(0.955 0.045 62);
+  --brand: oklch(0.81 0.16 84);
+  --brand-foreground: oklch(0.24 0.03 80);
+  --brand-muted: oklch(0.955 0.06 90);
 
   --destructive: oklch(0.58 0.22 27);
   --destructive-foreground: oklch(0.99 0 0);
