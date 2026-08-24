@@ -12,7 +12,7 @@ const tools = [
  */
 export function AIFan() {
   const count = tools.length;
-  const spread = 64; // total degrees of the fan
+  const spread = 96; // total degrees of the fan
 
   return (
     <div className="relative mx-auto h-[360px] w-full max-w-[440px] select-none md:h-[420px]">
@@ -24,10 +24,10 @@ export function AIFan() {
             return (
               <div
                 key={t.name}
-                className="fan-card liquid-glass-light absolute bottom-0 left-0 flex h-[210px] w-[140px] -translate-x-1/2 flex-col justify-between rounded-2xl p-4 md:h-[240px] md:w-[158px]"
+                className="fan-card liquid-glass-light absolute bottom-0 left-0 flex h-[210px] w-[140px] -translate-x-1/2 flex-col items-center gap-3 rounded-2xl p-4 pt-5 md:h-[240px] md:w-[158px]"
                 style={{
                   transform: `translateX(-50%) rotate(${angle}deg)`,
-                  transformOrigin: "50% 118%",
+                  transformOrigin: "50% 150%",
                   zIndex: i + 1,
                   animationDelay: `${i * 90}ms`,
                 }}
@@ -35,9 +35,9 @@ export function AIFan() {
                 <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-brand text-brand-foreground text-sm font-bold">
                   {t.name.charAt(0)}
                 </span>
-                <div>
+                <div className="text-center">
                   <div className="text-sm font-semibold text-foreground leading-tight">{t.name}</div>
-                  <div className="mt-1 text-[11px] uppercase tracking-wider text-muted-foreground">
+                  <div className="mt-1 text-[10px] uppercase tracking-wider text-muted-foreground">
                     {t.note}
                   </div>
                 </div>
