@@ -24,7 +24,7 @@ export function AIFan() {
             return (
               <div
                 key={t.name}
-                className="fan-card liquid-glass-light absolute bottom-0 left-0 flex h-[210px] w-[140px] -translate-x-1/2 flex-col items-center gap-3 rounded-2xl p-4 pt-5 md:h-[240px] md:w-[158px]"
+                className="fan-card liquid-glass-light absolute bottom-0 left-0 flex h-[210px] w-[140px] -translate-x-1/2 flex-col items-start gap-4 rounded-2xl p-3.5 md:h-[240px] md:w-[158px]"
                 style={{
                   transform: `translateX(-50%) rotate(${angle}deg)`,
                   transformOrigin: "50% 150%",
@@ -32,14 +32,14 @@ export function AIFan() {
                   animationDelay: `${i * 90}ms`,
                 }}
               >
-                <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-brand text-brand-foreground text-sm font-bold">
+                <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-brand text-brand-foreground text-xs font-bold">
                   {t.name.charAt(0)}
                 </span>
-                <div className="text-center">
-                  <div className="text-sm font-semibold text-foreground leading-tight">{t.name}</div>
-                  <div className="mt-1 text-[10px] uppercase tracking-wider text-muted-foreground">
-                    {t.note}
-                  </div>
+                <div
+                  className="text-[11px] font-semibold uppercase tracking-[0.18em] text-foreground whitespace-nowrap"
+                  style={{ writingMode: "vertical-rl" }}
+                >
+                  {t.name}
                 </div>
               </div>
             );
