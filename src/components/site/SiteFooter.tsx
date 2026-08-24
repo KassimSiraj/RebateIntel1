@@ -1,3 +1,4 @@
+import kmsLogo from "@/assets/kms-logo.png";
 import { Link } from "@tanstack/react-router";
 
 export function SiteFooter() {
@@ -7,10 +8,8 @@ export function SiteFooter() {
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-1">
             <Link to="/" className="flex items-center gap-2.5">
-              <img src="/favicon.png" alt="KMS Signal" className="h-8 w-8" />
-              <span className="text-lg font-semibold tracking-tight text-foreground">
-                KMS Signal
-              </span>
+              <img src={kmsLogo} alt="KMS Signal" className="h-9 w-auto" />
+              <span className="text-lg font-semibold tracking-tight text-foreground">Signal</span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground max-w-xs">
               AI visibility optimization for commercial solar companies — improving how they are

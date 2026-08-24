@@ -13,6 +13,7 @@ import {
 import { Section, SectionHeader } from "@/components/site/Section";
 import { Reveal } from "@/components/site/Reveal";
 import { ResearchVisual } from "@/components/site/ResearchVisual";
+import { AIFan } from "@/components/site/AIFan";
 import { FinalCTA } from "@/components/site/CTA";
 
 export const Route = createFileRoute("/")({
@@ -119,22 +120,27 @@ function HomePage() {
         <div aria-hidden className="pointer-events-none absolute inset-0 grid-backdrop" />
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-[420px] brand-glow" />
         <div className="container-page relative py-24 md:py-32">
-          <div className="max-w-3xl fade-up">
-            <div className="eyebrow mb-5">AI Visibility Optimization</div>
-            <h1 className="text-4xl md:text-6xl font-semibold tracking-tight text-foreground text-balance">
-              Get Your Commercial Solar Company Seen in AI Search.
-            </h1>
-            <p className="mt-6 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-              KMS Signal helps commercial solar companies improve how they are discovered,
-              understood, and represented across AI-powered search and recommendation systems.
-            </p>
-            <div className="mt-9">
-              <Link
-                to="/book"
-                className="liquid-glass inline-flex items-center gap-2 px-6 py-3.5 text-sm font-semibold"
-              >
-                Start a Conversation <ArrowRight className="h-4 w-4" />
-              </Link>
+          <div className="grid items-center gap-14 lg:grid-cols-12">
+            <div className="lg:col-span-7 fade-up">
+              <div className="eyebrow mb-5">AI Visibility Optimization</div>
+              <h1 className="text-4xl md:text-6xl font-semibold tracking-tight text-foreground text-balance">
+                Get Your Commercial Solar Company Seen in AI Search.
+              </h1>
+              <p className="mt-6 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
+                KMS Signal helps commercial solar companies improve how they are discovered,
+                understood, and represented across AI-powered search and recommendation systems.
+              </p>
+              <div className="mt-9">
+                <Link
+                  to="/book"
+                  className="liquid-glass inline-flex items-center gap-2 px-6 py-3.5 text-sm font-semibold"
+                >
+                  Start a Conversation <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+            <div className="lg:col-span-5 lg:translate-x-6">
+              <AIFan />
             </div>
           </div>
         </div>
