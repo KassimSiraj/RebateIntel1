@@ -12,7 +12,7 @@ const tools = [
  */
 export function AIFan() {
   const count = tools.length;
-  const spread = 96; // total degrees of the fan
+  const spread = 70; // total degrees of the fan
 
   return (
     <div className="relative mx-auto h-[360px] w-full max-w-[440px] select-none md:h-[420px]">
