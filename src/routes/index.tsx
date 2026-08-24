@@ -139,7 +139,7 @@ function HomePage() {
                 </Link>
               </div>
             </div>
-            <div className="lg:col-span-5">
+            <div className="lg:col-span-5 lg:translate-x-6">
               <AIFan />
             </div>
           </div>
