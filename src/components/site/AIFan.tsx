@@ -1,11 +1,12 @@
 const tools = [
-  { name: "ChatGPT", slug: "openai", color: "412991" },
-  { name: "Gemini", slug: "googlegemini", color: "8E75B2" },
-  { name: "Perplexity", slug: "perplexity", color: "1FB8CD" },
-  { name: "Claude", slug: "claude", color: "D97757" },
-  { name: "Copilot", slug: "githubcopilot", color: "000000" },
-  { name: "AI Overviews", slug: "google", color: "4285F4" },
+  { name: "ChatGPT", domain: "openai.com" },
+  { name: "Gemini", domain: "gemini.google.com" },
+  { name: "Perplexity", domain: "perplexity.ai" },
+  { name: "Claude", domain: "claude.ai" },
+  { name: "Copilot", domain: "microsoft.com" },
+  { name: "AI Overviews", domain: "google.com" },
 ];
+
 
 /**
  * AI platforms rendered as glass "poker cards" fanned out in a circular arc.
