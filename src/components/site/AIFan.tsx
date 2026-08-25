@@ -1,10 +1,10 @@
 const tools = [
-  { name: "ChatGPT", note: "OpenAI" },
-  { name: "Gemini", note: "Google" },
-  { name: "Perplexity", note: "Answer engine" },
-  { name: "Claude", note: "Anthropic" },
-  { name: "Copilot", note: "Microsoft" },
-  { name: "AI Overviews", note: "Google Search" },
+  { name: "ChatGPT", slug: "openai", color: "412991" },
+  { name: "Gemini", slug: "googlegemini", color: "8E75B2" },
+  { name: "Perplexity", slug: "perplexity", color: "1FB8CD" },
+  { name: "Claude", slug: "claude", color: "D97757" },
+  { name: "Copilot", slug: "githubcopilot", color: "000000" },
+  { name: "AI Overviews", slug: "google", color: "4285F4" },
 ];
 
 /**
@@ -32,8 +32,13 @@ export function AIFan() {
                   animationDelay: `${i * 90}ms`,
                 }}
               >
-                <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-brand text-brand-foreground text-xs font-bold">
-                  {t.name.charAt(0)}
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-background/80 shadow-sm">
+                  <img
+                    src={`https://cdn.simpleicons.org/${t.slug}/${t.color}`}
+                    alt={`${t.name} logo`}
+                    loading="lazy"
+                    className="h-5 w-5"
+                  />
                 </span>
                 <div
                   className="text-[11px] font-semibold uppercase tracking-[0.18em] text-foreground whitespace-nowrap"

@@ -17,10 +17,10 @@ export function SiteNav() {
   return (
     <header className="sticky top-0 z-40 bg-background/80 backdrop-blur-md hairline-b">
       <div className="container-page flex h-16 items-center justify-between">
-        <Link to="/" className="flex items-center gap-2.5">
+        <Link to="/" aria-label="KMS Signal — home" className="flex items-center">
           <img src={kmsLogo} alt="KMS Signal" className="h-9 w-auto" />
-          <span className="text-lg font-semibold tracking-tight text-foreground">Signal</span>
         </Link>
+
 
         <nav className="hidden lg:flex items-center gap-1">
           {navLinks.map((l) => (
