@@ -33,14 +33,15 @@ export function AIFan() {
                   animationDelay: `${i * 90}ms`,
                 }}
               >
-                <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-background/80 shadow-sm">
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-background/85 shadow-sm">
                   <img
-                    src={`https://cdn.simpleicons.org/${t.slug}/${t.color}`}
+                    src={`https://www.google.com/s2/favicons?domain=${t.domain}&sz=128`}
                     alt={`${t.name} logo`}
                     loading="lazy"
-                    className="h-5 w-5"
+                    className="h-5 w-5 object-contain"
                   />
                 </span>
+
                 <div
                   className="text-[11px] font-semibold uppercase tracking-[0.18em] text-foreground whitespace-nowrap"
                   style={{ writingMode: "vertical-rl" }}
