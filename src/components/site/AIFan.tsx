@@ -1,11 +1,12 @@
 const tools = [
-  { name: "ChatGPT", note: "OpenAI" },
-  { name: "Gemini", note: "Google" },
-  { name: "Perplexity", note: "Answer engine" },
-  { name: "Claude", note: "Anthropic" },
-  { name: "Copilot", note: "Microsoft" },
-  { name: "AI Overviews", note: "Google Search" },
+  { name: "ChatGPT", domain: "openai.com" },
+  { name: "Gemini", domain: "gemini.google.com" },
+  { name: "Perplexity", domain: "perplexity.ai" },
+  { name: "Claude", domain: "claude.ai" },
+  { name: "Copilot", domain: "microsoft.com" },
+  { name: "AI Overviews", domain: "google.com" },
 ];
+
 
 /**
  * AI platforms rendered as glass "poker cards" fanned out in a circular arc.
@@ -32,9 +33,15 @@ export function AIFan() {
                   animationDelay: `${i * 90}ms`,
                 }}
               >
-                <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-brand text-brand-foreground text-xs font-bold">
-                  {t.name.charAt(0)}
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-background/85 shadow-sm">
+                  <img
+                    src={`https://www.google.com/s2/favicons?domain=${t.domain}&sz=128`}
+                    alt={`${t.name} logo`}
+                    loading="lazy"
+                    className="h-5 w-5 object-contain"
+                  />
                 </span>
+
                 <div
                   className="text-[11px] font-semibold uppercase tracking-[0.18em] text-foreground whitespace-nowrap"
                   style={{ writingMode: "vertical-rl" }}
