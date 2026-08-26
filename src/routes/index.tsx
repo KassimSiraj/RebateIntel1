@@ -239,7 +239,10 @@ function HomePage() {
           description="KMS Signal conducted research into the Arizona commercial solar market using 20 buyer-intent queries in Gemini to observe which companies were surfaced most frequently, and what characteristics appeared among frequently mentioned companies."
         />
         <div className="mt-14">
-          <ResearchVisual />
+          <ResearchStory />
+          <div className="mt-10">
+            <ResearchVisual />
+          </div>
         </div>
         <div className="mt-8">
           <Link
