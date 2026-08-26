@@ -21,7 +21,7 @@ export function AIFan() {
     <div className="relative mx-auto h-[330px] w-full max-w-[460px] select-none md:h-[360px]">
       <div aria-hidden className="pointer-events-none absolute inset-0 brand-glow rounded-full" />
       <div className="absolute inset-x-0 top-1/2 flex -translate-y-1/2 justify-center">
-        <div className="relative h-0 w-0">
+        <div className="relative h-0 w-0 translate-y-[92px]">
           {tools.map((t, i) => {
             const angle = -spread / 2 + (spread / (count - 1)) * i;
             const rad = (angle * Math.PI) / 180;
