@@ -5,7 +5,7 @@ import { Section } from "@/components/site/Section";
 import { submitLead } from "@/lib/leads.functions";
 import { ArrowRight, Check, Calendar, Loader2 } from "lucide-react";
 
-const CAL_LINK = "https://cal.com/rebateintel/15min";
+const CAL_LINK = "https://cal.com/kmssignal/30min";
 
 export const Route = createFileRoute("/book")({
   head: () => ({
