@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section, SectionHeader } from "@/components/site/Section";
+import { ResearchStory } from "@/components/site/ResearchStory";
 import { ResearchVisual } from "@/components/site/ResearchVisual";
 import { FinalCTA } from "@/components/site/CTA";
 
@@ -71,7 +72,8 @@ function ResearchPage() {
       <Section surface>
         <SectionHeader eyebrow="The study" title="20 queries, one market, repeatable method." />
         <div className="mt-12">
-          <ResearchVisual />
+          <ResearchStory />
+          <div className="mt-10"><ResearchVisual /></div>
         </div>
       </Section>
 

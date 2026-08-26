@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { Section, SectionHeader } from "@/components/site/Section";
 import { Reveal } from "@/components/site/Reveal";
+import { ResearchStory } from "@/components/site/ResearchStory";
 import { ResearchVisual } from "@/components/site/ResearchVisual";
 import { AIFan } from "@/components/site/AIFan";
 import { FinalCTA } from "@/components/site/CTA";
