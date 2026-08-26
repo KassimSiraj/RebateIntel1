@@ -349,7 +349,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  border-radius: 9999px;
+  border-radius: 26%;
   isolation: isolate;
   animation: ri-orb-in 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
   border: 1px solid color-mix(in oklch, white 60%, transparent);
@@ -373,7 +373,7 @@
     content: "";
     position: absolute;
     inset: 6% 8% 42% 8%;
-    border-radius: 9999px;
+    border-radius: 20%;
     background: linear-gradient(
       180deg,
       color-mix(in oklch, white 70%, transparent),
