@@ -15,7 +15,6 @@ import { Route as ServiceRouteImport } from './routes/service'
 import { Route as ResearchRouteImport } from './routes/research'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as MethodologyRouteImport } from './routes/methodology'
-import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BookRouteImport } from './routes/book'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
@@ -50,11 +49,6 @@ const MethodologyRoute = MethodologyRouteImport.update({
   path: '/methodology',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const BookRoute = BookRouteImport.update({
   id: '/book',
   path: '/book',
@@ -75,7 +69,6 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/book': typeof BookRoute
-  '/contact': typeof ContactRoute
   '/methodology': typeof MethodologyRoute
   '/privacy': typeof PrivacyRoute
   '/research': typeof ResearchRoute
@@ -87,7 +80,6 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/book': typeof BookRoute
-  '/contact': typeof ContactRoute
   '/methodology': typeof MethodologyRoute
   '/privacy': typeof PrivacyRoute
   '/research': typeof ResearchRoute
@@ -100,7 +92,6 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/book': typeof BookRoute
-  '/contact': typeof ContactRoute
   '/methodology': typeof MethodologyRoute
   '/privacy': typeof PrivacyRoute
   '/research': typeof ResearchRoute
@@ -114,7 +105,6 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/book'
-    | '/contact'
     | '/methodology'
     | '/privacy'
     | '/research'
@@ -126,7 +116,6 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/book'
-    | '/contact'
     | '/methodology'
     | '/privacy'
     | '/research'
@@ -138,7 +127,6 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/book'
-    | '/contact'
     | '/methodology'
     | '/privacy'
     | '/research'
@@ -151,7 +139,6 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   BookRoute: typeof BookRoute
-  ContactRoute: typeof ContactRoute
   MethodologyRoute: typeof MethodologyRoute
   PrivacyRoute: typeof PrivacyRoute
   ResearchRoute: typeof ResearchRoute
@@ -204,13 +191,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MethodologyRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/book': {
       id: '/book'
       path: '/book'
@@ -239,7 +219,6 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   BookRoute: BookRoute,
-  ContactRoute: ContactRoute,
   MethodologyRoute: MethodologyRoute,
   PrivacyRoute: PrivacyRoute,
   ResearchRoute: ResearchRoute,
