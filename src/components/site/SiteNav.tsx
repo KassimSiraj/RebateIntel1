@@ -8,7 +8,6 @@ const navLinks = [
   { to: "/methodology", label: "Methodology" },
   { to: "/research", label: "Research" },
   { to: "/about", label: "About" },
-  { to: "/contact", label: "Contact" },
 ];
 
 export function SiteNav() {
@@ -17,11 +16,8 @@ export function SiteNav() {
   return (
     <header className="sticky top-0 z-40 bg-background/80 backdrop-blur-md hairline-b">
       <div className="container-page flex h-16 items-center justify-between">
-        <Link to="/" aria-label="KMS Signal — home" className="flex flex-col items-center leading-none">
+        <Link to="/" aria-label="KMS Signal — home" className="flex items-center">
           <img src={kmsLogo} alt="KMS Signal" className="h-9 w-auto" />
-          <span className="mt-0.5 text-[0.6rem] font-semibold tracking-[0.42em] text-foreground">
-            SIGNAL
-          </span>
         </Link>
 
 

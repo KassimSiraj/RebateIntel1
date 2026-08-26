@@ -24,7 +24,6 @@ export function SiteFooter() {
 
           <FooterCol title="Company">
             <FooterLink to="/about">About</FooterLink>
-            <FooterLink to="/contact">Contact</FooterLink>
           </FooterCol>
 
           <FooterCol title="Resources">
