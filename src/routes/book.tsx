@@ -45,14 +45,19 @@ function BookPage() {
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!complete || status === "saving") return;
+    if (!complete || status === "saving" || status === "done") return;
     setStatus("saving");
     setError(null);
     try {
       await send({ data: fields });
       setStatus("done");
-    } catch {
-      setError("We couldn't save your details. Please try again.");
+    } catch (err) {
+      const message = err instanceof Error ? err.message : "";
+      setError(
+        message && message.length < 160
+          ? message
+          : "We couldn't save your details. Please try again.",
+      );
       setStatus("idle");
     }
   }
