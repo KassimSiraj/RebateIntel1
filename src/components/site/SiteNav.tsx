@@ -63,7 +63,7 @@ export function SiteNav() {
                 key={l.to}
                 to={l.to}
                 onClick={() => setOpen(false)}
-                className="py-2.5 text-sm text-foreground"
+                className="flex min-h-11 items-center py-2.5 text-sm text-foreground"
               >
                 {l.label}
               </Link>
