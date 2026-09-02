@@ -139,7 +139,7 @@ export function ResearchStory() {
   const activeSet = new Set(showResults ? current.results : []);
 
   return (
-    <div ref={ref} className="relative">
+    <div ref={ref} className="relative overflow-x-clip">
       {/* Logo tiles behind the glass */}
       <div aria-hidden className="pointer-events-none absolute inset-0">
         <div className="absolute inset-8 brand-glow rounded-[3rem] blur-2xl" />
