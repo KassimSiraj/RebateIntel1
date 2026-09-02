@@ -44,16 +44,19 @@ export function SiteNav() {
         </div>
 
         <button
-          aria-label="Open menu"
+          type="button"
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+          aria-controls="mobile-menu"
           onClick={() => setOpen((v) => !v)}
-          className="lg:hidden inline-flex items-center justify-center rounded-md p-2 text-foreground"
+          className="lg:hidden inline-flex min-h-11 min-w-11 items-center justify-center rounded-md p-2 text-foreground"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
 
       {open && (
-        <div className="lg:hidden hairline-t">
+        <div id="mobile-menu" className="lg:hidden hairline-t">
           <div className="container-page py-3 flex flex-col">
             {navLinks.map((l) => (
               <Link
