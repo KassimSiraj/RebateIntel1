@@ -86,9 +86,10 @@ export function ResearchStory() {
 
     let cancelled = false;
     let timer: ReturnType<typeof setTimeout>;
-    let i = 0;
+    let i = cursor.current;
 
     const runQuery = () => {
+      cursor.current = i;
       if (cancelled) return;
       setIndex(i);
       setShowResults(false);
