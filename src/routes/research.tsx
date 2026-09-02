@@ -23,8 +23,9 @@ export const Route = createFileRoute("/research")({
           "What we observed about how AI-powered search surfaces commercial solar companies in Arizona.",
       },
       { property: "og:type", content: "article" },
-      { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:url", content: "https://kmssignal.com/research" },
     ],
+    links: [{ rel: "canonical", href: "https://kmssignal.com/research" }],
   }),
   component: ResearchPage,
 });
