@@ -32,8 +32,7 @@ export const Route = createFileRoute("/")({
         content:
           "AI visibility optimization for commercial solar companies: discoverability, understanding, evidence, and differentiation.",
       },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:url", content: "https://kmssignal.com/" },
     ],
     links: [{ rel: "canonical", href: "https://kmssignal.com/" }],
   }),

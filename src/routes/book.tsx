@@ -21,10 +21,9 @@ export const Route = createFileRoute("/book")({
         property: "og:description",
         content: "Unlock the calendar and book a strategy call with KMS Signal.",
       },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:url", content: "https://kmssignal.com/book" },
     ],
-    links: [{ rel: "canonical", href: "/book" }],
+    links: [{ rel: "canonical", href: "https://kmssignal.com/book" }],
   }),
   component: BookPage,
 });
@@ -142,7 +141,9 @@ function BookPage() {
                 />
 
                 {error && (
-                  <p className="md:col-span-2 text-sm text-destructive">{error}</p>
+                  <p role="alert" aria-live="polite" className="md:col-span-2 text-sm text-destructive">
+                    {error}
+                  </p>
                 )}
 
                 <div className="md:col-span-2 mt-2 flex flex-wrap items-center gap-3">
@@ -174,6 +175,13 @@ function BookPage() {
   );
 }
 
+const autoCompleteMap: Record<string, string> = {
+  name: "name",
+  email: "email",
+  jobTitle: "organization-title",
+  company: "organization",
+};
+
 function Field({
   label,
   name,
@@ -198,9 +206,12 @@ function Field({
         type={type}
         required
         maxLength={200}
+        autoComplete={autoCompleteMap[name] ?? "on"}
+        inputMode={type === "email" ? "email" : undefined}
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="mt-2 w-full rounded-md border border-border bg-background px-3 py-2.5 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+        /* 16px on mobile prevents iOS Safari from zooming on focus */
+        className="mt-2 w-full min-h-11 rounded-md border border-border bg-background px-3 py-2.5 text-base md:text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
       />
     </div>
   );

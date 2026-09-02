@@ -100,6 +100,32 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap",
       },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://kmssignal.com/#organization",
+              name: "KMS Signal",
+              url: "https://kmssignal.com/",
+              logo: "https://kmssignal.com/favicon.png",
+              description:
+                "KMS Signal helps commercial solar companies improve how they are discovered, understood, and represented across AI-powered search.",
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://kmssignal.com/#website",
+              url: "https://kmssignal.com/",
+              name: "KMS Signal",
+              publisher: { "@id": "https://kmssignal.com/#organization" },
+            },
+          ],
+        }),
+      },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,

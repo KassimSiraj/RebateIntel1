@@ -59,7 +59,7 @@ export function AIFan() {
                     <img
                       src={`https://www.google.com/s2/favicons?domain=${t.domain}&sz=128`}
                       alt={`${t.name} logo`}
-                      loading="lazy"
+                      loading="eager"
                       decoding="async"
                       width={128}
                       height={128}

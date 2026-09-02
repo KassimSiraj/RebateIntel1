@@ -48,21 +48,19 @@ const queries: Query[] = [
 const TYPE_MS = 26;
 const HOLD_MS = 900;
 
+/**
+ * Tracks visibility continuously so the typing loop can pause while the panel is
+ * off-screen — an always-running timer causes scroll jank elsewhere on the page.
+ */
 function useInView<T extends HTMLElement>() {
   const ref = useRef<T>(null);
   const [inView, setInView] = useState(false);
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const io = new IntersectionObserver(
-      ([e]) => {
-        if (e.isIntersecting) {
-          setInView(true);
-          io.disconnect();
-        }
-      },
-      { threshold: 0.25 },
-    );
+    const io = new IntersectionObserver(([e]) => setInView(e.isIntersecting), {
+      threshold: 0.15,
+    });
     io.observe(el);
     return () => io.disconnect();
   }, []);
@@ -74,6 +72,7 @@ export function ResearchStory() {
   const [index, setIndex] = useState(0);
   const [typed, setTyped] = useState(0);
   const [showResults, setShowResults] = useState(false);
+  const cursor = useRef(0);
 
   useEffect(() => {
     if (!inView) return;
@@ -87,9 +86,10 @@ export function ResearchStory() {
 
     let cancelled = false;
     let timer: ReturnType<typeof setTimeout>;
-    let i = 0;
+    let i = cursor.current;
 
     const runQuery = () => {
+      cursor.current = i;
       if (cancelled) return;
       setIndex(i);
       setShowResults(false);
@@ -139,7 +139,7 @@ export function ResearchStory() {
   const activeSet = new Set(showResults ? current.results : []);
 
   return (
-    <div ref={ref} className="relative">
+    <div ref={ref} className="relative overflow-x-clip">
       {/* Logo tiles behind the glass */}
       <div aria-hidden className="pointer-events-none absolute inset-0">
         <div className="absolute inset-8 brand-glow rounded-[3rem] blur-2xl" />
