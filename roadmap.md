@@ -1,9 +1,9 @@
 # Roadmap
 
-## In progress
-- [x] Fix failing SEO findings (canonical + og:url on /research, remove redundant og:type/twitter:card duplicates, add Organization/WebSite JSON-LD)
-- [ ] Technical audit pass (no redesign): scroll performance, mobile/desktop responsiveness, load performance, animation smoothness, forms, navigation, accessibility, layout stability, SEO basics, code quality
+## Done
+- [x] Fix failing SEO findings (canonical + og:url on /research and /book, removed duplicate social tags, added brand structured data, added legal pages to sitemap)
+- [x] Technical audit pass (no redesign): scroll performance, mobile/desktop responsiveness, forms, navigation, accessibility, layout stability, SEO basics
 
-## Notes
-- Stale SEO findings referencing industries.tsx / resources.tsx no longer apply (pages removed).
-- robots.txt sitemap intentionally points at kmssignal.com per owner request.
+## Open (needs your decision)
+- Suggested new comparison article "Solar SEO vs AI Visibility" — new content, not done (would add a page/copy).
+- robots.txt + sitemap use kmssignal.com; the repo still contains old rebateintel.com domain files (CNAME).
