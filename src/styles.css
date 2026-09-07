@@ -193,6 +193,29 @@
   padding-bottom: 5rem;
 }
 
+.cal-inline-shell {
+  width: 100%;
+  min-width: 0;
+  height: clamp(42rem, 78vh, 52rem);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  background: var(--color-background);
+}
+
+.cal-inline-shell > div {
+  min-width: 0;
+  overflow-x: hidden !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 47.999rem) {
+  .cal-inline-shell {
+    height: 46rem;
+    border-radius: var(--radius-lg);
+  }
+}
+
 /* ── Enhancement layer: ambient backdrops, motion, marquee ─────────── */
 
 @utility grid-backdrop {
