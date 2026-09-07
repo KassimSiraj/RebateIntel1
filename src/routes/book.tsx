@@ -2,10 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { useServerFn } from "@tanstack/react-start";
 import { Section } from "@/components/site/Section";
+import { CalInlineEmbed } from "@/components/site/CalInlineEmbed";
 import { submitLead } from "@/lib/leads.functions";
 import { ArrowRight, Check, Calendar, Loader2 } from "lucide-react";
-
-const CAL_LINK = "https://cal.com/kmssignal/30min";
 
 export const Route = createFileRoute("/book")({
   head: () => ({
@@ -103,14 +102,7 @@ function BookPage() {
                 <p className="mt-2 text-sm text-muted-foreground">
                   Pick a 15-minute slot that works for you.
                 </p>
-                <a
-                  href={CAL_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="liquid-glass mt-8 inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold"
-                >
-                  Book strategy call <ArrowRight className="h-4 w-4" />
-                </a>
+                <CalInlineEmbed />
               </div>
             ) : (
               <form onSubmit={onSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4">

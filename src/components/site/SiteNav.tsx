@@ -1,4 +1,4 @@
-import kmsLogo from "@/assets/kms-logo.png";
+import kmsLogoAsset from "@/assets/kms-signal-logo.png.asset.json";
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
@@ -17,7 +17,7 @@ export function SiteNav() {
     <header className="sticky top-0 z-40 bg-background/80 backdrop-blur-md hairline-b">
       <div className="container-page flex h-16 items-center justify-between">
         <Link to="/" aria-label="KMS Signal — home" className="flex items-center">
-          <img src={kmsLogo} alt="KMS Signal" className="h-9 w-auto" />
+          <img src={kmsLogoAsset.url} alt="KMS Signal" className="h-10 w-auto" />
         </Link>
 
 

@@ -1,4 +1,4 @@
-import kmsLogo from "@/assets/kms-logo.png";
+import kmsLogoAsset from "@/assets/kms-signal-logo.png.asset.json";
 import { Link } from "@tanstack/react-router";
 
 export function SiteFooter() {
@@ -8,7 +8,7 @@ export function SiteFooter() {
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-1">
             <Link to="/" aria-label="KMS Signal — home" className="flex items-center">
-              <img src={kmsLogo} alt="KMS Signal" className="h-9 w-auto" />
+              <img src={kmsLogoAsset.url} alt="KMS Signal" className="h-12 w-auto" />
             </Link>
 
             <p className="mt-4 text-sm text-muted-foreground max-w-xs">
