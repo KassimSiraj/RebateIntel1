@@ -18,6 +18,8 @@ import { ResearchVisual } from "@/components/site/ResearchVisual";
 import { AIFan } from "@/components/site/AIFan";
 import { FinalCTA } from "@/components/site/CTA";
 
+const SITE_ORIGIN = "https://kmssignal.com";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -36,6 +38,32 @@ export const Route = createFileRoute("/")({
       { property: "og:url", content: "https://kmssignal.com/" },
     ],
     links: [{ rel: "canonical", href: "https://kmssignal.com/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": `${SITE_ORIGIN}/#organization`,
+              name: "KMS Signal",
+              url: `${SITE_ORIGIN}/`,
+              logo: `${SITE_ORIGIN}${kmsLogoAsset.url}`,
+              description:
+                "KMS Signal helps commercial solar companies improve how they are discovered, understood, and represented across AI-powered search.",
+            },
+            {
+              "@type": "WebSite",
+              "@id": `${SITE_ORIGIN}/#website`,
+              url: `${SITE_ORIGIN}/`,
+              name: "KMS Signal",
+              publisher: { "@id": `${SITE_ORIGIN}/#organization` },
+            },
+          ],
+        }),
+      },
+    ],
   }),
   component: HomePage,
 });
