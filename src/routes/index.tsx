@@ -10,7 +10,6 @@ import {
   Wrench,
   Activity,
 } from "lucide-react";
-import kmsLogoAsset from "@/assets/kms-signal-logo.png.asset.json";
 import { Section, SectionHeader } from "@/components/site/Section";
 import { Reveal } from "@/components/site/Reveal";
 import { ResearchStory } from "@/components/site/ResearchStory";
@@ -49,7 +48,7 @@ export const Route = createFileRoute("/")({
               "@id": `${SITE_ORIGIN}/#organization`,
               name: "KMS Signal",
               url: `${SITE_ORIGIN}/`,
-              logo: `${SITE_ORIGIN}${kmsLogoAsset.url}`,
+              logo: `${SITE_ORIGIN}/kms-signal-logo.png`,
               description:
                 "KMS Signal helps commercial solar companies improve how they are discovered, understood, and represented across AI-powered search.",
             },
