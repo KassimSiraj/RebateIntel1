@@ -10,6 +10,7 @@ import {
   Wrench,
   Activity,
 } from "lucide-react";
+import kmsLogoAsset from "@/assets/kms-signal-logo.png.asset.json";
 import { Section, SectionHeader } from "@/components/site/Section";
 import { Reveal } from "@/components/site/Reveal";
 import { ResearchStory } from "@/components/site/ResearchStory";
