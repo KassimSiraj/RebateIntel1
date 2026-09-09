@@ -10,12 +10,15 @@ import {
   Wrench,
   Activity,
 } from "lucide-react";
+import kmsLogoAsset from "@/assets/kms-signal-logo.png.asset.json";
 import { Section, SectionHeader } from "@/components/site/Section";
 import { Reveal } from "@/components/site/Reveal";
 import { ResearchStory } from "@/components/site/ResearchStory";
 import { ResearchVisual } from "@/components/site/ResearchVisual";
 import { AIFan } from "@/components/site/AIFan";
 import { FinalCTA } from "@/components/site/CTA";
+
+const SITE_ORIGIN = "https://kmssignal.com";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -35,6 +38,32 @@ export const Route = createFileRoute("/")({
       { property: "og:url", content: "https://kmssignal.com/" },
     ],
     links: [{ rel: "canonical", href: "https://kmssignal.com/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": `${SITE_ORIGIN}/#organization`,
+              name: "KMS Signal",
+              url: `${SITE_ORIGIN}/`,
+              logo: `${SITE_ORIGIN}${kmsLogoAsset.url}`,
+              description:
+                "KMS Signal helps commercial solar companies improve how they are discovered, understood, and represented across AI-powered search.",
+            },
+            {
+              "@type": "WebSite",
+              "@id": `${SITE_ORIGIN}/#website`,
+              url: `${SITE_ORIGIN}/`,
+              name: "KMS Signal",
+              publisher: { "@id": `${SITE_ORIGIN}/#organization` },
+            },
+          ],
+        }),
+      },
+    ],
   }),
   component: HomePage,
 });
