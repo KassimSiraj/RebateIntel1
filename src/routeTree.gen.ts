@@ -18,6 +18,7 @@ import { Route as MethodologyRouteImport } from './routes/methodology'
 import { Route as BookRouteImport } from './routes/book'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ResearchArizonaCommercialSolarAiVisibilityRouteImport } from './routes/research_.arizona-commercial-solar-ai-visibility'
 
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
@@ -64,6 +65,12 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ResearchArizonaCommercialSolarAiVisibilityRoute =
+  ResearchArizonaCommercialSolarAiVisibilityRouteImport.update({
+    id: '/research_/arizona-commercial-solar-ai-visibility',
+    path: '/research/arizona-commercial-solar-ai-visibility',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -75,6 +82,7 @@ export interface FileRoutesByFullPath {
   '/service': typeof ServiceRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
+  '/research/arizona-commercial-solar-ai-visibility': typeof ResearchArizonaCommercialSolarAiVisibilityRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -86,6 +94,7 @@ export interface FileRoutesByTo {
   '/service': typeof ServiceRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
+  '/research/arizona-commercial-solar-ai-visibility': typeof ResearchArizonaCommercialSolarAiVisibilityRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -98,6 +107,7 @@ export interface FileRoutesById {
   '/service': typeof ServiceRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
+  '/research_/arizona-commercial-solar-ai-visibility': typeof ResearchArizonaCommercialSolarAiVisibilityRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -111,6 +121,7 @@ export interface FileRouteTypes {
     | '/service'
     | '/sitemap.xml'
     | '/terms'
+    | '/research/arizona-commercial-solar-ai-visibility'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -122,6 +133,7 @@ export interface FileRouteTypes {
     | '/service'
     | '/sitemap.xml'
     | '/terms'
+    | '/research/arizona-commercial-solar-ai-visibility'
   id:
     | '__root__'
     | '/'
@@ -133,6 +145,7 @@ export interface FileRouteTypes {
     | '/service'
     | '/sitemap.xml'
     | '/terms'
+    | '/research_/arizona-commercial-solar-ai-visibility'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -145,6 +158,7 @@ export interface RootRouteChildren {
   ServiceRoute: typeof ServiceRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
+  ResearchArizonaCommercialSolarAiVisibilityRoute: typeof ResearchArizonaCommercialSolarAiVisibilityRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -212,6 +226,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/research_/arizona-commercial-solar-ai-visibility': {
+      id: '/research_/arizona-commercial-solar-ai-visibility'
+      path: '/research/arizona-commercial-solar-ai-visibility'
+      fullPath: '/research/arizona-commercial-solar-ai-visibility'
+      preLoaderRoute: typeof ResearchArizonaCommercialSolarAiVisibilityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -225,6 +246,8 @@ const rootRouteChildren: RootRouteChildren = {
   ServiceRoute: ServiceRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,
+  ResearchArizonaCommercialSolarAiVisibilityRoute:
+    ResearchArizonaCommercialSolarAiVisibilityRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
