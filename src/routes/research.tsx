@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Section, SectionHeader } from "@/components/site/Section";
 import { ResearchStory } from "@/components/site/ResearchStory";
 import { ResearchVisual } from "@/components/site/ResearchVisual";
@@ -97,6 +97,25 @@ function ResearchPage() {
             platform or to control what AI systems recommend. We publish this work to show how we
             think about the market, and because it informs where we look first during an engagement.
           </p>
+        </div>
+      </Section>
+
+      <Section surface>
+        <div className="max-w-3xl">
+          <div className="eyebrow mb-4">Published research</div>
+          <h2 className="text-2xl md:text-3xl font-semibold text-foreground">
+            Arizona Commercial Solar AI Visibility Benchmark
+          </h2>
+          <p className="mt-4 text-base text-muted-foreground leading-relaxed">
+            An observational study of how commercial solar companies in Arizona appeared
+            across buyer-intent searches in Gemini.
+          </p>
+          <Link
+            to="/research/arizona-commercial-solar-ai-visibility"
+            className="mt-6 inline-flex items-center text-sm font-semibold text-brand hover:underline"
+          >
+            Read the benchmark →
+          </Link>
         </div>
       </Section>
 

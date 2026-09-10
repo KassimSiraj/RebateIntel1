@@ -18,6 +18,11 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/service", changefreq: "monthly", priority: "0.9" },
           { path: "/methodology", changefreq: "monthly", priority: "0.8" },
           { path: "/research", changefreq: "monthly", priority: "0.8" },
+          {
+            path: "/research/arizona-commercial-solar-ai-visibility",
+            changefreq: "monthly",
+            priority: "0.8",
+          },
           { path: "/about", changefreq: "monthly", priority: "0.6" },
           { path: "/book", changefreq: "monthly", priority: "0.9" },
           { path: "/privacy", changefreq: "monthly", priority: "0.3" },
