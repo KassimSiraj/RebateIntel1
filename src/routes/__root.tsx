@@ -89,6 +89,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "KMS Signal" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+    ],
+    scripts: [
       {
         tag: "script",
         attrs: { async: true, src: "https://www.googletagmanager.com/gtag/js?id=G-2D0X1TNRSZ" },
