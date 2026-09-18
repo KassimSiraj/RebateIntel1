@@ -45,36 +45,20 @@ export const Route = createFileRoute("/")({
           "@graph": [
             {
               "@type": "Organization",
-              "@id": `${SITE_ORIGIN}/#organization`,
-              name: "KMS Signal",
-              url: `${SITE_ORIGIN}/`,
-              logo: `${SITE_ORIGIN}/kms-signal-logo.png`,
-              description:
-                "KMS Signal helps commercial solar companies improve how they are discovered, understood, and represented across AI-powered search.",
-            },
-            {
-              "@type": "WebSite",
-              "@id": `${SITE_ORIGIN}/#website`,
-              url: `${SITE_ORIGIN}/`,
-              name: "KMS Signal",
-              publisher: { "@id": `${SITE_ORIGIN}/#organization` },
-            },
-          ],
-        }),
-      },
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@graph": [
-            {
-              "@type": "Organization",
               "@id": "https://kmssignal.com/#organization",
               name: "KMS Signal",
-              url: "https://kmssignal.com",
+              url: "https://kmssignal.com/",
+              logo: "https://kmssignal.com/kms-signal-logo.png",
               description:
                 "AI Visibility Optimization for commercial solar companies — helping businesses get discovered and represented across AI-powered search and recommendation systems.",
               sameAs: ["https://www.linkedin.com/company/kms-signal"],
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://kmssignal.com/#website",
+              url: "https://kmssignal.com/",
+              name: "KMS Signal",
+              publisher: { "@id": "https://kmssignal.com/#organization" },
             },
             {
               "@type": "Person",
