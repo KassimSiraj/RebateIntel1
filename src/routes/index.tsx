@@ -17,7 +17,6 @@ import { ResearchVisual } from "@/components/site/ResearchVisual";
 import { AIFan } from "@/components/site/AIFan";
 import { FinalCTA } from "@/components/site/CTA";
 
-const SITE_ORIGIN = "https://kmssignal.com";
 
 export const Route = createFileRoute("/")({
   head: () => ({
