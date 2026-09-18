@@ -62,6 +62,32 @@ export const Route = createFileRoute("/")({
           ],
         }),
       },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://kmssignal.com/#organization",
+              name: "KMS Signal",
+              url: "https://kmssignal.com",
+              description:
+                "AI Visibility Optimization for commercial solar companies — helping businesses get discovered and represented across AI-powered search and recommendation systems.",
+              sameAs: ["https://www.linkedin.com/company/kms-signal"],
+            },
+            {
+              "@type": "Person",
+              "@id": "https://kmssignal.com/#founder",
+              name: "Kassim Siraj",
+              url: "https://kmssignal.com/about",
+              jobTitle: "Founder, KMS Signal",
+              worksFor: { "@id": "https://kmssignal.com/#organization" },
+              sameAs: ["https://www.linkedin.com/in/kassimsiraj1/"],
+            },
+          ],
+        }),
+      },
     ],
   }),
   component: HomePage,
