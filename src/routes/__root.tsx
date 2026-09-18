@@ -89,6 +89,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "KMS Signal" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      {
+        tag: "script",
+        attrs: { async: true, src: "https://www.googletagmanager.com/gtag/js?id=__GA_MEASUREMENT_ID__" },
+      },
+      {
+        tag: "script",
+        children:
+          "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', '__GA_MEASUREMENT_ID__');",
+      },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
