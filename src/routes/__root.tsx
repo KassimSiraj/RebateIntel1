@@ -91,12 +91,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
     ],
     scripts: [
+      { async: true, src: "https://www.googletagmanager.com/gtag/js?id=G-2D0X1TNRSZ" },
       {
-        tag: "script",
-        attrs: { async: true, src: "https://www.googletagmanager.com/gtag/js?id=G-2D0X1TNRSZ" },
-      },
-      {
-        tag: "script",
         children:
           "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-2D0X1TNRSZ');",
       },
